@@ -1,1 +1,113 @@
+# 🔧 Profetizador de Fallas
+### Sistema de mantenimiento predictivo basado en Machine Learning
 
+Proyecto académico realizado en el marco del curso **Introducción a Machine Learning - Data Science II**  
+Coderhouse
+
+---
+
+## 📌 Descripción del proyecto
+
+Este proyecto analiza el comportamiento de equipos industriales a partir de métricas operativas registradas en el tiempo, con el objetivo de identificar patrones asociados a fallas y evaluar la posibilidad de anticiparlas mediante modelos de Machine Learning.
+
+El enfoque se basa en el análisis exploratorio de datos (EDA), la formulación de hipótesis y la construcción de un modelo predictivo orientado al mantenimiento preventivo.
+
+---
+
+## 🎯 Objetivos
+
+- Analizar el comportamiento de los equipos en función de sus métricas operativas  
+- Identificar variables relevantes asociadas a fallas  
+- Evaluar la posibilidad de predecir fallas futuras  
+- Aplicar técnicas de Machine Learning en un caso realista de industria  
+
+---
+
+## 📊 Dataset
+
+- **Fuente:** Dataset público de mantenimiento predictivo  
+- **Registros:** +120.000  
+- **Variables:**
+  - Fecha
+  - Identificador de equipo
+  - Métricas operativas (metric1 a metric9)
+  - Indicador de falla (0 = No falla, 1 = Falla)
+
+---
+
+## 🧠 Metodología
+
+### 🔹 Limpieza de datos
+- Conversión de fechas  
+- Verificación de valores nulos y duplicados  
+- Validación de consistencia del dataset  
+
+### 🔹 Análisis exploratorio (EDA)
+
+#### Análisis Univariado
+- Estadísticas descriptivas  
+- Distribución de métricas  
+
+#### Análisis Bivariado
+- Comparación métricas vs falla (boxplots)  
+- Correlaciones entre variables (heatmap)  
+
+#### Análisis Temporal
+- Evolución de fallas en el tiempo  
+- Promedios móviles  
+- Análisis por períodos  
+
+#### Feature Engineering
+- Creación de variable `failure_next` (predicción futura)  
+- Creación de `uso_acumulado` por dispositivo  
+
+---
+
+## 🤖 Machine Learning
+
+Se implementó un modelo de clasificación utilizando **Random Forest**, con el objetivo de predecir fallas futuras a partir de las métricas actuales.
+
+El modelo recibe variables operativas como entrada y devuelve una predicción binaria:
+- 0 → No falla  
+- 1 → Falla  
+
+---
+
+## ⚠️ Resultados y limitaciones
+
+El modelo presenta una alta precisión general, pero dificultades para detectar fallas debido al desbalance del dataset, donde los eventos de falla son poco frecuentes.
+
+Este comportamiento es común en problemas de mantenimiento predictivo y destaca la importancia de contar con datos representativos de fallas para mejorar el rendimiento del modelo.
+
+---
+
+## 🧾 Conclusiones
+
+A partir del análisis realizado, se concluye que:
+
+- El comportamiento de los equipos depende de múltiples variables operativas  
+- No existen relaciones simples que expliquen las fallas  
+- Las fallas son eventos poco frecuentes pero críticos  
+- El Machine Learning permite abordar este tipo de problemas complejos  
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- Python  
+- Pandas  
+- Numpy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+- Google Colab  
+
+---
+
+## 👩‍💻 Autor
+
+- **Nombre:** Silvina Danisa Moreno  
+- **Mail:** silvina.danisa.moreno@gmail.com  
+- **GitHub:** SilvinaMoreno
+- **Comisión:** 77790  
+- **Año:** 2026  
